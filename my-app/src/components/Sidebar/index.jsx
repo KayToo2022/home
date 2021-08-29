@@ -41,9 +41,9 @@ function Sidebar() {
                 <Link to="/home/" className="links">Home</Link> 
             </p>
             
-            <p>
-                <Link to="/about" className="links">About</Link>
-            </p>
+            {/* <p>
+                <Link to="/Blog" className="links">Blog</Link>
+            </p> */}
             
             <p className="links" onClick={()=>{toggleDropdown(!dropdown)}}>
                 Portfolio
@@ -55,7 +55,7 @@ function Sidebar() {
             }
                 
             <p>
-                <Link to="/contactme" className="links">Contact Me</Link>
+                <a href="https://docs.google.com/document/d/1HfQWGTYjcnomf1kFJP9o5jeZVK7PxHznHnXaFY5pnG8/edit?usp=sharing" target="_blank" className="links">Resume</a>
             </p>            
         </div>
     )

@@ -36,7 +36,7 @@ export default function BasicExample() {
                   <PortfolioSummary/>
                   
                 </Route>
-                <Route path="/about">
+                <Route path="/Blog">
                   <About />
                 </Route>
                 <Route path="/WebPortfolio">
