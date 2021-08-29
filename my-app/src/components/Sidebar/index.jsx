@@ -32,13 +32,13 @@ function Sidebar() {
             <img src={Logo} style = {{height: '50px', width: '50px', borderRadius:'50%', marginTop: '40px'}}></img>
 
             <h1>
-                <Link to="/" className="links">Kyle Tu</Link>
+                <Link to="/home" className="links">Kyle Tu</Link>
             </h1>
 
             <p>kaytoo2022@gmail.com</p>
             
             <p>
-                <Link to="/" className="links">Home</Link> 
+                <Link to="/home" className="links">Home</Link> 
             </p>
             
             <p>
