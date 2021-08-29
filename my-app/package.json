@@ -1,6 +1,6 @@
 {
-  "homepage": "http://KayToo2022.github.io/",
-  "name": "my-app",
+  "homepage": "http://KayToo2022.github.io/home/",
+  "name": "home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
