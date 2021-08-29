@@ -31,7 +31,7 @@ export default function BasicExample() {
           <div className="main" style={{float: 'left', backgroundColor:'#c9cece'}}>
             <div style={{backgroundColor: 'white', margin:'50px'}}>
               <Switch>
-                <Route exact path="/home/">
+                <Route exact path="/">
                   <Home/>
                   <PortfolioSummary/>
                   
