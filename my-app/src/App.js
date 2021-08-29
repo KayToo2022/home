@@ -3,58 +3,58 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useHistory
 } from "react-router-dom";
 
 import Home from "./components/Home"
+import PortfolioSummary from "./components/PortfolioSummary"
+import Navbar from "./components/Navbar"
+import Sidebar from "./components/Sidebar"
+import WebPortfolio from"./components/WebPortfolio"
+import SoftwarePortfolio from"./components/SoftwarePortfolio"
 
-// This site has 3 pages, all of which are rendered
-// dynamically in the browser (not server rendered).
-//
-// Although the page does not ever refresh, notice how
-// React Router keeps the URL up to date as you navigate
-// through the site. This preserves the browser history,
-// making sure things like the back button and bookmarks
-// work properly.
+import "./App.css";
 
 export default function BasicExample() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
+      <div className="App">
+          <div className="side" style={{width: '300px', float: 'left'}}>
+            <nav className="navbar side navbar-expand-lg navbar-light p-0" >
+              
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <Sidebar/>
+              </div>
+            </nav>  
+          </div>
+          <div className="main" style={{float: 'left', backgroundColor:'#c9cece'}}>
+            <div style={{backgroundColor: 'white', margin:'50px'}}>
+              <Switch>
+                <Route exact path="/">
+                  <Home/>
+                  <PortfolioSummary/>
+                  
+                </Route>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/WebPortfolio">
+                  <WebPortfolio/>
+                </Route>
+                <Route path="/SoftwarePortfolio">
+                  <SoftwarePortfolio/>
+                </Route>
+                <Route path="/contactme">
+                  <ContactMe />
+                </Route>
 
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-        </Switch>
+              </Switch>
+            </div>
+             
+          </div>
       </div>
-    </Router>
+   </Router>
   );
 }
 
@@ -72,7 +72,7 @@ export default function BasicExample() {
 function About() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>about filler</h2>
     </div>
   );
 }
@@ -80,7 +80,15 @@ function About() {
 function Dashboard() {
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h2>portfolio filler</h2>
     </div>
   );
+}
+
+function ContactMe() {
+  return (
+    <div>
+      <h2>contact filler</h2>
+    </div>
+  )
 }

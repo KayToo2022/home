@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400&display=swap');
+.sidebar{
+    height:100vh;
+    /* margin-top: -50px; */
+    width:100%;
+    background-color:#f2f3f7;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.links {
+    text-decoration: none;
+    color:#000;
+    font-size: larger;
+    line-height: 1.4rem;
+}
+
+.sublinks{
+    text-decoration: none;
+    color:#000;
+    font-style: italic;
+    /* font-size: larger;
+    line-height: 1.4rem; */
+}
+
+p.links:hover{
+    
+    color: #f26522;
+}
+
+a:hover {
+    
+    color: #f26522;
+}
