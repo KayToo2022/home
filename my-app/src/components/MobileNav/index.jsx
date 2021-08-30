@@ -49,7 +49,6 @@ function MobileNav() {
                             toggleHamburger(false)
                         }}>Resume</a>
                     </p>   
-                
                 </div>
             </div>
             
