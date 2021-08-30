@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400&display=swap');
 .root {
     --heigt: 50px;
     --width: 60px;
@@ -9,15 +11,11 @@
 }
 
 .linkButton {
-    /* width: 8%; */
-    /* width: 9%; */
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-right: 20px;
-    /* padding-left: 10px; */
-    font-weight: 600;
-    border: 1px solid red;
+    text-decoration: none;
+    color:#000;
+    font-size: larger;
+    line-height: 1.4rem;
+    margin: 10px;
 }
 
 .navContainer {

@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect, useState}from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,12 +13,72 @@ import Navbar from "./components/Navbar"
 import Sidebar from "./components/Sidebar"
 import WebPortfolio from"./components/WebPortfolio"
 import SoftwarePortfolio from"./components/SoftwarePortfolio"
+import MobileNav from "./components/MobileNav"
 
 import "./App.css";
 
-export default function BasicExample() {
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+export default function App() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  // console.log(window.innerHeight)
+  console.log(getWindowDimensions().width)
+  if (getWindowDimensions().width < 800) {
+    return (
+      <Router>
+        <MobileNav/>
+        
+        <div className="App">
+            
+            <div className="main" style={{float: 'left', backgroundColor:'#c9cece', width: '100vw', marginTop: '80px'}}>
+              <div style={{backgroundColor: 'white', margin:'50px'}}>
+                <Switch>
+                  <Route exact path="/home">
+                    <Home/>
+                    <PortfolioSummary/>
+                    
+                  </Route>
+                  <Route path="/Blog">
+                    <About />
+                  </Route>
+                  <Route path="/WebPortfolio">
+                    <WebPortfolio/>
+                  </Route>
+                  <Route path="/SoftwarePortfolio">
+                    <SoftwarePortfolio/>
+                  </Route>
+                  <Route path="/contactme">
+                    <ContactMe />
+                  </Route>
+  
+                </Switch>
+              </div>
+               
+            </div>
+        </div>
+     </Router>
+    );
+  }
   return (
     <Router>
+      {/* <MobileNav/> */}
+      
       <div className="App">
           <div className="side" style={{width: '300px', float: 'left'}}>
             <nav className="navbar side navbar-expand-lg navbar-light p-0" >

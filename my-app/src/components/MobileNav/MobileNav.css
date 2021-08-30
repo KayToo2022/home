@@ -14,7 +14,6 @@
     text-decoration: none;
     color:#000;
     font-size: larger;
-    font-family: 'Quicksand',Arial, sans-serif;
     line-height: 1.4rem;
 }
 
@@ -34,4 +33,12 @@ p.links:hover{
 a:hover {
     
     color: #f26522;
+}
+
+.email {
+    text-decoration: none;
+    color:#000;
+    /* font-size: larger; */
+    font-family: 'Quicksand',Arial, sans-serif;
+    line-height: 1.4rem;
 }

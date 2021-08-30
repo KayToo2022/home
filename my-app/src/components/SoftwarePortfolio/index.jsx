@@ -11,13 +11,13 @@ import Manifest from "../../images/Manifest.png"
 
 function SoftwarePortfolio() {
     return(
-        <>
+        <div>
             <div style={{paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px', paddingBottom:'20px'}}>
                 <h1>Software Development Portfolio</h1>
 
                 <p className="subheader">Raytracer</p>
 
-                <div style={{height: '200px'}}>
+                <div style={{overflow: 'auto'}}>
                     <div style={{width: '30%', float: 'left'}}>
                         <img src={Spheres} style={{width: '100%'}}></img>
                     </div>
@@ -40,7 +40,7 @@ function SoftwarePortfolio() {
 
                 <p className="subheader">Flight Simulation Demo</p>
 
-                <div style={{height: '150px'}}>
+                <div style={{overflow: 'auto'}}>
 
                     <p style={{width: '65%', float: 'left'}}>
                         This flight simulation demo was coded in C++ and the openFrameworks library. It is a simple game where the player is tasked with landing their ship
@@ -61,7 +61,7 @@ function SoftwarePortfolio() {
 
                 <p className="subheader">AI Hangman</p>
 
-                <div style={{height: '120px'}}>
+                <div style={{overflow: 'auto'}}>
 
                     <p style={{width: '100%', float: 'left'}}>
                         The AI Hangman project was a study in how different AI approaches can be used in the game of hangman with both a simple approach and a complex
@@ -78,7 +78,7 @@ function SoftwarePortfolio() {
 
                 <p className="subheader">Tinnitus Clinical System</p>
 
-                <div style={{height: '120px'}}>
+                <div style={{overflow: 'auto'}}>
                     
 
                     <p style={{width: '100%', float: 'left'}}>
@@ -94,7 +94,7 @@ function SoftwarePortfolio() {
                 
             </div>
             
-        </>
+        </div>
         
     )
 }

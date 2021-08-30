@@ -16,7 +16,7 @@ function WebPortfolio() {
 
                 <p className="subheader">Meals For Me (Infinite Options)</p>
 
-                <div style={{height: '200px'}}>
+                <div style={{overflow: 'auto'}}>
                     <div style={{width: '20%', float: 'left'}}>
                         <img src={M4ME} style={{width: '100%'}}></img>
                     </div>
@@ -40,7 +40,7 @@ function WebPortfolio() {
 
                 <p className="subheader">Serving Fresh (Infinite Options)</p>
 
-                <div style={{height: '200px'}}>
+                <div style={{overflow: 'auto'}}>
                     <div style={{width: '20%', float: 'left'}}>
                         <img src={SF} style={{width: '100%'}}></img>
                     </div>
@@ -60,7 +60,7 @@ function WebPortfolio() {
 
                 <p className="subheader">Manifest (Infinite Options)</p>
 
-                <div style={{height: '200px'}}>
+                <div style={{overflow: 'auto'}}>
                     <div style={{width: '20%', float: 'left'}}>
                         <img src={Manifest} style={{width: '100%'}}></img>
                     </div>
