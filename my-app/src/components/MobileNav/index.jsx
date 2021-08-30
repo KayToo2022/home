@@ -49,7 +49,7 @@ function MobileNav() {
                             toggleHamburger(false)
                         }}>Resume</a>
                     </p>   
-                    
+
                 </div>
             </div>
             
@@ -70,13 +70,13 @@ function MobileNav() {
                 // maxWidth: "100%",
             }}
         >
-            <div style={{width: '33%'}}>
+            <div style={{width: '30%'}}>
                 <img src={Hamburger} style={{height: '40px', margin: '20px'}} onClick={()=>{
                     console.log(hamburger)
                     toggleHamburger(!hamburger)
                 }}></img>
             </div>
-            <div style={{width: '33%', textAlign: 'center'}}>
+            <div style={{width: '40%', textAlign: 'center'}}>
                 <h1>
                     <Link to="/home/" className="links" onClick={()=>{
                         toggleHamburger(false)
@@ -84,7 +84,9 @@ function MobileNav() {
                 </h1>
                 
             </div>
-            
+            <div style={{width: '30%'}}>
+                
+            </div>
 
             
         </div>

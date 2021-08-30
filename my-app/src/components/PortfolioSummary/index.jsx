@@ -7,7 +7,7 @@ import Spheres from "../../images/Spheres.jpg"
 function PortfolioSummary() {
     return(
         <>
-            <div style={{paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px', paddingBottom:'20px'}}>
+            <div style={{paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px', paddingBottom:'20px', overflow: 'auto'}}>
                 <h1>Portfolio Summary</h1>
 
                 <p className="subheader">Web Development</p>
@@ -52,9 +52,9 @@ function PortfolioSummary() {
                 
                 
             </div>
-            <div style={{marginLeft: '40px', marginRight: '40px'}}>
+            {/* <div style={{marginLeft: '40px', marginRight: '40px'}}>
                 <hr/>
-            </div>
+            </div> */}
         </>
         
     )
