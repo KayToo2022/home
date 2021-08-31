@@ -27,6 +27,9 @@ function PortfolioSummary() {
                 
                 <br/>
 
+            </div>
+            <div style={{paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px', paddingBottom:'20px', overflow: 'auto'}}>
+
                 <p className="subheader">Software Development</p>
 
                 <div style={{width: '70%', float: 'left'}}>
