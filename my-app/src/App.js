@@ -15,6 +15,8 @@ import WebPortfolio from"./components/WebPortfolio"
 import SoftwarePortfolio from"./components/SoftwarePortfolio"
 import MobileNav from "./components/MobileNav"
 
+import CoverLetter from "./components/CoverLetter"
+
 import "./App.css";
 
 function getWindowDimensions() {
@@ -67,6 +69,9 @@ export default function App() {
                     <ContactMe />
                   </Route>
   
+                  <Route path="/experimental">
+                    <CoverLetter/>
+                  </Route>
                 </Switch>
               </div>
                
@@ -107,6 +112,10 @@ export default function App() {
                 </Route>
                 <Route path="/contactme">
                   <ContactMe />
+                </Route>
+
+                <Route path="/CoverLetter">
+                  <CoverLetter />
                 </Route>
 
               </Switch>

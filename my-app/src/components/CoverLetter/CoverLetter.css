@@ -1,0 +1,19 @@
+.subheader{
+    font-style: italic;
+    font-size: larger;
+    text-decoration: none;
+    color: #000;
+}
+
+.link{
+    font-style: italic;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+a.link:hover {
+    font-style: italic;
+    font-size: 18px;
+    color: #f26522;
+}
