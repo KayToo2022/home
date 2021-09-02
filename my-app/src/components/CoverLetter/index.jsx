@@ -38,7 +38,7 @@ function CoverLetter() {
         if (!showLetter) {
             if (getWindowDimensions().width < 800) {
                 return (
-                    <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '0'}} onClick={()=>{toggleShow(true)}}>
+                    <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '80px', left: '0'}} onClick={()=>{toggleShow(true)}}>
                         <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '10%', left: '10%', width: '80%', height:'80%', zIndex: '100', opacity: '100%'}}>
                             <Form style={{margin: '5%'}}>
                                 <p style={{fontSize: 'larger'}}>Fill out this form to get started</p>
