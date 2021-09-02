@@ -4,6 +4,14 @@ import {Form, Button} from 'react-bootstrap'
 
 import "./CoverLetter.css"
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+
 function CoverLetter() {
 
     const[formPortion, incrementForm] = useState(0);
@@ -28,6 +36,82 @@ function CoverLetter() {
 
     const getInfoModal = () => {
         if (!showLetter) {
+            if (getWindowDimensions().width < 800) {
+                return (
+                    <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '0'}} onClick={()=>{toggleShow(true)}}>
+                        <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '10%', left: '10%', width: '80%', height:'80%', zIndex: '100', opacity: '100%'}}>
+                            <Form style={{margin: '5%'}}>
+                                <p style={{fontSize: 'larger'}}>Fill out this form to get started</p>
+                                
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Label className="formsubhead">Who are you?</Form.Label>
+                                    <br/>
+                                    <Form.Label className="formlabel">Name</Form.Label>
+                                    <Form.Control defaultValue={name} className="forminput"  className="forminput" placeholder="Enter name" id="name"/>
+                                    <br/>
+                                    <Form.Label className="formlabel">Email</Form.Label>
+                                    <Form.Control defaultValue={email} className="forminput"  type="email" placeholder="Enter email" id="email"/>
+                                    <br/>
+                                    <Form.Label className="formlabel">Phone #</Form.Label>
+                                    <Form.Control defaultValue={phone} className="forminput"  placeholder="Enter phone number" id="phone"/>
+                                </Form.Group>
+    
+                                <br/>
+    
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label className="formsubhead">What are you applying for?</Form.Label>
+                                    <br/>
+                                    <Form.Label className="formlabel">Job title</Form.Label>
+                                    <Form.Control defaultValue={jobTitle} className="forminput"  placeholder="Enter job title" id="title"/>
+                                    <br/>
+                                    <Form.Label className="formlabel">Company</Form.Label>
+                                    <Form.Control defaultValue={org} className="forminput"  type="email" placeholder="Enter company name" id="org"/>
+                                    <br/>
+                                    <Form.Label className="formlabel">Job field</Form.Label>
+                                    <Form.Control defaultValue={field} className="forminput"  placeholder="Enter job field" id="field"/>
+                                </Form.Group>
+    
+                                <br/>
+    
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label className="formsubhead">What skills are they looking for?</Form.Label>
+                                    
+                                    <br/>
+                                    <Form.Label className="formlabellarge">Skills (separate skills with a comma)</Form.Label>
+                                    <Form.Control defaultValue={inputSkills} className="forminputlarge"  as="textarea" placeholder="Enter skills" rows={3} id="skills"/>
+                                    <br/>
+                                </Form.Group>
+    
+                                
+    
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label className="formsubhead">Why do you want to work here?</Form.Label>
+                                    <br/>
+                                    <Form.Label className="formlabellarge">Reason</Form.Label>
+                                    
+                                    <Form.Control defaultValue={motivation} className="forminputlarge"  as="textarea" placeholder="Enter motivation" rows={3} id="motivation"/>
+                                    <br/>
+                                    
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label className="formsubhead">List some achievments relating to the job</Form.Label>
+                                    <br/>
+                                    <Form.Label className="formlabellarge">Achievments (put each achievment on a new line)</Form.Label>
+                                        <Form.Control defaultValue={inputAchievments} className="forminputlarge"  as="textarea" placeholder="Enter achievments" rows={3} id="achievments"/>
+                                    <br/>
+                                    
+                                </Form.Group>
+                                
+                                <Button variant="primary" onClick={() => {handleClick()}}>
+                                    Submit
+                                </Button>
+                                <button style={{marginLeft: '15px'}} onClick={()=>{toggleShow(true)}}>Cancel</button>
+                            </Form>
+                            
+                        </div>
+                    </div>
+                )
+            }
             return (
                 <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '0'}} onClick={()=>{toggleShow(true)}}>
                     <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '10%', left: '30%', width: '40%', height:'80%', zIndex: '100', opacity: '100%'}}>
@@ -179,9 +263,9 @@ function CoverLetter() {
                 for you. You can then copy the letter or export the letter as a word doc.
             </p>
 
-            <button onClick={()=>{toggleShow(false)}}>Fill out form</button>
+            <button onClick={()=>{toggleShow(false)}} style={{marginRight: '20px', marginBottom: '10px'}}>Fill out form</button>
 
-            <button onClick={() => {exportContent('exportContent')}} style={{marginLeft: '20px'}}>Export as .doc</button>
+            <button onClick={() => {exportContent('exportContent')}} >Export as .doc</button>
 
             <div id="exportContent" style={{width: '96%', border: 'solid', padding: '1%', marginTop: '20px', boxShadow: '10px 5px 5px gray'}}>
                 <p>Dear {HM},</p>
