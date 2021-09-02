@@ -69,8 +69,8 @@ export default function App() {
                     <ContactMe />
                   </Route>
   
-                  <Route path="/experimental">
-                    <CoverLetter/>
+                  <Route path="/CoverLetter">
+                    <CoverLetter />
                   </Route>
                 </Switch>
               </div>

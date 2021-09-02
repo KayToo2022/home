@@ -17,3 +17,42 @@ a.link:hover {
     font-size: 18px;
     color: #f26522;
 }
+
+.formlabel {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.forminput {
+    display: inline-block;
+    margin-left: 5%;
+    width: 55%;
+}
+
+.forminputlarge {
+    display: inline-block;
+    margin-left: 5%;
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+.formsubhead {
+    font-size: larger;
+    /* margin-top: 30px;
+    margin-bottom: 25px; */
+}
+
+.formlabellarge {
+    width: '90%';
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #c9cece;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}

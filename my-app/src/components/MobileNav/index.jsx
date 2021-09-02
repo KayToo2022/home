@@ -44,6 +44,12 @@ function MobileNav() {
                             toggleHamburger(false)
                         }}>Software Portfolio</Link> 
                     </p>
+
+                    <p>
+                        <Link to="/CoverLetter" className="links" onClick={()=>{
+                            toggleHamburger(false)
+                        }}>Cover Letter Generator</Link> 
+                    </p>
                     <p>
                         <a href="https://docs.google.com/document/d/1HfQWGTYjcnomf1kFJP9o5jeZVK7PxHznHnXaFY5pnG8/edit?usp=sharing" target="_blank" className="links" onClick={()=>{
                             toggleHamburger(false)

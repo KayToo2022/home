@@ -49,6 +49,10 @@ function Sidebar() {
                 Portfolio
             </p>
 
+            <p>
+                <Link to="/CoverLetter" className="links">Cover Letter Generator</Link> 
+            </p>
+
             {dropdown
                 ? showDropdown()
                 : null

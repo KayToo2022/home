@@ -1,35 +1,133 @@
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {Form, Button} from 'react-bootstrap'
 
 import "./CoverLetter.css"
 
 function CoverLetter() {
 
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
+    const[formPortion, incrementForm] = useState(0);
 
-    const [HM, setHM] = useState('');
-    const [jobTitle, setJobTitle] = useState('')
-    const [org, setOrg] = useState('')
-    const [field, setField] = useState('')
-    const [motivation, setMotivation] = useState('')
+    const [name, setName] = useState('*your name*')
+    const [phone, setPhone] = useState('*your phone*')
+    const [email, setEmail] = useState('*your email*')
 
-    const [achievments, setAchievments] = useState([]);
+    const [HM, setHM] = useState('Hiring Manager');
+    const [jobTitle, setJobTitle] = useState('*job title*')
+    const [org, setOrg] = useState('*company name*')
+    const [field, setField] = useState('*job industry*')
+    const [motivation, setMotivation] = useState('*why you want this job*')
 
-    const [showLetter, toggleShow] = useState(false);
+    const [skills, setSkills] = useState('*skills*');
+    const [inputSkills, setInputSkills] = useState('*skills')
+    const [achievments, setAchievments] = useState(['*achievment*']);
+    const [inputAchievments, setInputAchievments] = useState('*achievment*');
+
+    const [showLetter, toggleShow] = useState(true);
+    const [knowsHM, toggleKHM] = useState(false);
 
     const getInfoModal = () => {
         if (!showLetter) {
             return (
-                <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '300px'}}>
-                    <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '50px', left: '50px', width: '300px', zIndex: '100', opacity: '100%'}}>
+                <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '0'}} onClick={()=>{toggleShow(true)}}>
+                    <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '10%', left: '30%', width: '40%', height:'80%', zIndex: '100', opacity: '100%'}}>
+                        <Form style={{margin: '5%'}}>
+                            <p style={{fontSize: 'larger'}}>Fill out this form to get started</p>
+                            
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Label className="formsubhead">Who are you?</Form.Label>
+                                <br/>
+                                <Form.Label className="formlabel">Name</Form.Label>
+                                <Form.Control defaultValue={name} className="forminput"  className="forminput" placeholder="Enter name" id="name"/>
+                                <br/>
+                                <Form.Label className="formlabel">Email</Form.Label>
+                                <Form.Control defaultValue={email} className="forminput"  type="email" placeholder="Enter email" id="email"/>
+                                <br/>
+                                <Form.Label className="formlabel">Phone #</Form.Label>
+                                <Form.Control defaultValue={phone} className="forminput"  placeholder="Enter phone number" id="phone"/>
+                            </Form.Group>
+
+                            <br/>
+
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label className="formsubhead">What are you applying for?</Form.Label>
+                                <br/>
+                                <Form.Label className="formlabel">Job title</Form.Label>
+                                <Form.Control defaultValue={jobTitle} className="forminput"  placeholder="Enter job title" id="title"/>
+                                <br/>
+                                <Form.Label className="formlabel">Company</Form.Label>
+                                <Form.Control defaultValue={org} className="forminput"  type="email" placeholder="Enter company name" id="org"/>
+                                <br/>
+                                <Form.Label className="formlabel">Job field</Form.Label>
+                                <Form.Control defaultValue={field} className="forminput"  placeholder="Enter job field" id="field"/>
+                            </Form.Group>
+
+                            <br/>
+
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label className="formsubhead">What skills are they looking for?</Form.Label>
+                                
+                                <br/>
+                                <Form.Label className="formlabellarge">Skills (separate skills with a comma)</Form.Label>
+                                <Form.Control defaultValue={inputSkills} className="forminputlarge"  as="textarea" placeholder="Enter skills" rows={3} id="skills"/>
+                                <br/>
+                            </Form.Group>
+
+                            
+
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label className="formsubhead">Why do you want to work here?</Form.Label>
+                                <br/>
+                                <Form.Label className="formlabellarge">Reason</Form.Label>
+                                
+                                <Form.Control defaultValue={motivation} className="forminputlarge"  as="textarea" placeholder="Enter motivation" rows={3} id="motivation"/>
+                                <br/>
+                                
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label className="formsubhead">List some achievments relating to the job</Form.Label>
+                                <br/>
+                                <Form.Label className="formlabellarge">Achievments (put each achievment on a new line)</Form.Label>
+                                    <Form.Control defaultValue={inputAchievments} className="forminputlarge"  as="textarea" placeholder="Enter achievments" rows={3} id="achievments"/>
+                                <br/>
+                                
+                            </Form.Group>
+                            
+                            <Button variant="primary" onClick={() => {handleClick()}}>
+                                Submit
+                            </Button>
+                            <button style={{marginLeft: '15px'}} onClick={()=>{toggleShow(true)}}>Cancel</button>
+                        </Form>
                         
-                        <div onClick={()=>{toggleShow(true)}}>toggle</div>
                     </div>
                 </div>
             )
         }
+    }
+
+    const handleClick = () => {
+        setName(document.getElementById("name").value)
+        setPhone(document.getElementById("phone").value)
+        setEmail(document.getElementById("email").value)
+
+        setJobTitle(document.getElementById("title").value)
+        setOrg(document.getElementById("org").value)
+        setField(document.getElementById("field").value)
+        setMotivation(document.getElementById("motivation").value)
+
+        setInputSkills(document.getElementById('skills').value)
+        var tempSkills = document.getElementById('skills').value
+        var lastCommaindex = tempSkills.lastIndexOf(',')
+        if (lastCommaindex != -1) {
+            tempSkills = tempSkills.slice(0, lastCommaindex) + ", and" + tempSkills.slice(lastCommaindex+1, tempSkills.length)
+        }
+        setSkills(tempSkills)
+
+        setInputAchievments(document.getElementById("achievments").value)
+        var tempAchievments = document.getElementById("achievments").value.split('\n')
+        setAchievments(tempAchievments)
+
+        toggleShow(true)
     }
 
     const exportContent = (element, filename = '') => {
@@ -48,7 +146,7 @@ function CoverLetter() {
         var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
         
         // Specify file name
-        filename = filename?filename+'.docx':'document.docx';
+        filename = name && org?name+' '+org+' Cover Letter.docx':'Cover Letter.docx';
         
         // Create download link element
         var downloadLink = document.createElement("a");
@@ -72,37 +170,43 @@ function CoverLetter() {
     }
 
     return(
-        <div style={{margin: '40px', overflow: 'auto'}}>
+        <div style={{margin: '40px', overflow: 'auto', paddingBottom: '40px'}}>
             {getInfoModal()}
-            <div id="exportContent">
-                <p>Dear Hiring Manager</p>
+            <h1>Cover Letter Template</h1>
+            <p>
+                Do you hate writing cover letters? I know I do. That's why I made this tool to help me write cover letters
+                so I don't have to. Just enter the details of the job in the form below and the site will fill the template
+                for you. You can then copy the letter or export the letter as a word doc.
+            </p>
+
+            <button onClick={()=>{toggleShow(false)}}>Fill out form</button>
+
+            <button onClick={() => {exportContent('exportContent')}} style={{marginLeft: '20px'}}>Export as .doc</button>
+
+            <div id="exportContent" style={{width: '96%', border: 'solid', padding: '1%', marginTop: '20px', boxShadow: '10px 5px 5px gray'}}>
+                <p>Dear {HM},</p>
                 <p>
-                    I’m excited to apply for the [Job Title] position at [Organization Name]. 
+                    I’m excited to apply for the {jobTitle} position at {org}. 
                     Although I’m an entry-level applicant, I am passionate about doing a great 
-                    job and out of the skills you’re looking for I have already developed 
-                    [Skill #1, Skill #2, Skill #3].
+                    job and out of the skills you’re looking for I have already developed {skills}.
                 </p>
 
                 <p>
-                    I’m very interested in beginning a career in the [Career Field] field, as I 
-                    [Something That Motivates You to Join In]. I believe I’ll make an excellent 
-                    [Job Title] thanks to my skills, plus the following accomplishments:
+                    I’m very interested in beginning a career in the {field} field,   
+                    as {motivation}. I believe I’ll make an excellent {jobTitle} thanks to my skills, plus the following accomplishments:
                 </p>
 
                 <ul>
-                    <li>
-                        [Achievement #1 that Used a Skill they Need]
-                    </li>
-                    <li>
-                        [Achievement #2 that Used a Skill they Need]
-                    </li>
-                    <li>
-                        [Achievement #3 that Used a Skill they Need]
-                    </li>
+                    {achievments.map((ach) => (
+                        <li>
+                            {ach}
+                        </li>
+                    ),)}
+                    
                 </ul>
 
                 <p>
-                    I’m excited to show you how my [2 Skills They Need] can help you achieve your 
+                    I’m excited to show you how my {skills} can help you achieve your 
                     upcoming goals. Could we set up a time to discuss your needs?
                 </p>
 
@@ -111,19 +215,17 @@ function CoverLetter() {
                 </p>
 
                 <p>
-                    [Name]
+                    {name}
                 </p>
                 <p>
-                    [Phone Num]
+                    {phone}
                 </p>
                 <p>
-                    [Email]
+                    {email}
                 </p>
             </div>
 
-            <div onClick={()=>{toggleShow(false)}}>toggle</div>
-
-            <button onClick={() => {exportContent('exportContent')}}>Export as .doc</button>
+            
         </div>
         
     )
