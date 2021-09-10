@@ -35,18 +35,18 @@ function MobileNav() {
                         }}>Home</Link> 
                     </p>
                     <p>
-                        <Link to="/WebPortfolio" className="links" onClick={()=>{
+                        <Link to="/home/WebPortfolio" className="links" onClick={()=>{
                             toggleHamburger(false)
                         }}>Web Portfolio</Link> 
                     </p>
                     <p>
-                        <Link to="/SoftwarePortfolio" className="links" onClick={()=>{
+                        <Link to="/home/SoftwarePortfolio" className="links" onClick={()=>{
                             toggleHamburger(false)
                         }}>Software Portfolio</Link> 
                     </p>
 
                     <p>
-                        <Link to="/CoverLetter" className="links" onClick={()=>{
+                        <Link to="/home/CoverLetter" className="links" onClick={()=>{
                             toggleHamburger(false)
                         }}>Cover Letter Generator</Link> 
                     </p>

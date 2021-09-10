@@ -60,21 +60,21 @@ export default function App() {
                   <Route path="/Blog">
                     <About />
                   </Route>
-                  <Route path="/WebPortfolio">
+                  <Route path="/home/WebPortfolio">
                     <WebPortfolio/>
                   </Route>
-                  <Route path="/SoftwarePortfolio">
+                  <Route path="//homeSoftwarePortfolio">
                     <SoftwarePortfolio/>
                   </Route>
-                  <Route path="/contactme">
+                  <Route path="/home/contactme">
                     <ContactMe />
                   </Route>
   
-                  <Route path="/CoverLetter">
+                  <Route path="/home/CoverLetter">
                     <CoverLetter />
                   </Route>
 
-                  <Route path="/education">
+                  <Route path="/home/education">
                     <Education/>
                   </Route>
                 </Switch>
@@ -106,24 +106,24 @@ export default function App() {
                   <PortfolioSummary/>
                   
                 </Route>
-                <Route path="/Blog">
+                {/* <Route path="/Blog">
                   <About />
-                </Route>
-                <Route path="/WebPortfolio">
+                </Route> */}
+                <Route path="/home/WebPortfolio">
                   <WebPortfolio/>
                 </Route>
-                <Route path="/SoftwarePortfolio">
+                <Route path="/home/SoftwarePortfolio">
                   <SoftwarePortfolio/>
                 </Route>
-                <Route path="/contactme">
+                <Route path="/home/contactme">
                   <ContactMe />
                 </Route>
 
-                <Route path="/CoverLetter">
+                <Route path="/home/CoverLetter">
                   <CoverLetter />
                 </Route>
 
-                <Route path="/education">
+                <Route path="/home/education">
                   <Education/>
                 </Route>
 
