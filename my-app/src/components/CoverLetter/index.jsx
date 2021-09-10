@@ -16,20 +16,20 @@ function CoverLetter() {
 
     const[formPortion, incrementForm] = useState(0);
 
-    const [name, setName] = useState('*your name*')
-    const [phone, setPhone] = useState('*your phone*')
-    const [email, setEmail] = useState('*your email*')
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
 
     const [HM, setHM] = useState('Hiring Manager');
-    const [jobTitle, setJobTitle] = useState('*job title*')
-    const [org, setOrg] = useState('*company name*')
-    const [field, setField] = useState('*job industry*')
-    const [motivation, setMotivation] = useState('*why you want this job*')
+    const [jobTitle, setJobTitle] = useState('')
+    const [org, setOrg] = useState('')
+    const [field, setField] = useState('')
+    const [motivation, setMotivation] = useState('')
 
-    const [skills, setSkills] = useState('*skills*');
-    const [inputSkills, setInputSkills] = useState('*skills')
-    const [achievments, setAchievments] = useState(['*achievment*']);
-    const [inputAchievments, setInputAchievments] = useState('*achievment*');
+    const [skills, setSkills] = useState('');
+    const [inputSkills, setInputSkills] = useState('')
+    const [achievments, setAchievments] = useState(['']);
+    const [inputAchievments, setInputAchievments] = useState('');
 
     const [showLetter, toggleShow] = useState(true);
     const [knowsHM, toggleKHM] = useState(false);
@@ -38,8 +38,8 @@ function CoverLetter() {
         if (!showLetter) {
             if (getWindowDimensions().width < 800) {
                 return (
-                    <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '80px', left: '0'}} onClick={()=>{toggleShow(true)}}>
-                        <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '120px', left: '10%', width: '80%', height:'80%', zIndex: '100', opacity: '100%'}}>
+                    <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '80px', left: '0'}} >
+                        <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '80px', left: '10%', width: '80%', height:'80%', zIndex: '100', opacity: '100%'}}>
                             <Form style={{margin: '5%'}}>
                                 <p style={{fontSize: 'larger'}}>Fill out this form to get started</p>
                                 
@@ -101,11 +101,15 @@ function CoverLetter() {
                                     <br/>
                                     
                                 </Form.Group>
+
+                                <div style={{textAlign:'center'}}>
+                                    <Button variant="primary" onClick={() => {handleClick()}}>
+                                        Submit
+                                    </Button>
+                                    <button style={{marginLeft: '15px'}} onClick={()=>{toggleShow(true)}}>Cancel</button>
+                                </div>
                                 
-                                <Button variant="primary" onClick={() => {handleClick()}}>
-                                    Submit
-                                </Button>
-                                <button style={{marginLeft: '15px'}} onClick={()=>{toggleShow(true)}}>Cancel</button>
+                               
                             </Form>
                             
                         </div>
@@ -113,7 +117,7 @@ function CoverLetter() {
                 )
             }
             return (
-                <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '0'}} onClick={()=>{toggleShow(true)}}>
+                <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)', width: '100vw', height: '100vh', zIndex: '99', position: 'absolute', top: '0', left: '0'}} >
                     <div style={{backgroundColor: 'white', overflow: 'auto', position: 'absolute', top: '10%', left: '30%', width: '40%', height:'80%', zIndex: '100', opacity: '100%'}}>
                         <Form style={{margin: '5%'}}>
                             <p style={{fontSize: 'larger'}}>Fill out this form to get started</p>
@@ -176,11 +180,15 @@ function CoverLetter() {
                                 <br/>
                                 
                             </Form.Group>
+
+                            <div style={{textAlign:'center'}}>
+                                <Button variant="primary" onClick={() => {handleClick()}}>
+                                    Submit
+                                </Button>
+                                <button style={{marginLeft: '15px'}} onClick={()=>{toggleShow(true)}}>Cancel</button>
+                            </div>
                             
-                            <Button variant="primary" onClick={() => {handleClick()}}>
-                                Submit
-                            </Button>
-                            <button style={{marginLeft: '15px'}} onClick={()=>{toggleShow(true)}}>Cancel</button>
+                            
                         </Form>
                         
                     </div>

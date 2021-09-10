@@ -14,6 +14,7 @@ import Sidebar from "./components/Sidebar"
 import WebPortfolio from"./components/WebPortfolio"
 import SoftwarePortfolio from"./components/SoftwarePortfolio"
 import MobileNav from "./components/MobileNav"
+import Education from "./components/Education"
 
 import CoverLetter from "./components/CoverLetter"
 
@@ -72,6 +73,10 @@ export default function App() {
                   <Route path="/CoverLetter">
                     <CoverLetter />
                   </Route>
+
+                  <Route path="/education">
+                    <Education/>
+                  </Route>
                 </Switch>
               </div>
                
@@ -116,6 +121,10 @@ export default function App() {
 
                 <Route path="/CoverLetter">
                   <CoverLetter />
+                </Route>
+
+                <Route path="/education">
+                  <Education/>
                 </Route>
 
               </Switch>
