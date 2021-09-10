@@ -57,9 +57,9 @@ export default function App() {
                     <PortfolioSummary/>
                     
                   </Route>
-                  <Route path="/Blog">
+                  {/* <Route path="/Blog">
                     <About />
-                  </Route>
+                  </Route> */}
                   <Route path="/home/WebPortfolio">
                     <WebPortfolio/>
                   </Route>
