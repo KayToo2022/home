@@ -49,14 +49,16 @@ function Sidebar() {
                 Portfolio
             </p>
 
-            <p>
-                <Link to="/home/CoverLetter" className="links">Cover Letter Generator</Link> 
-            </p>
-
             {dropdown
                 ? showDropdown()
                 : null
             }
+
+            <p>
+                <Link to="/home/CoverLetter" className="links">Cover Letter Generator</Link> 
+            </p>
+
+            
                 
             <p>
                 <a href="https://docs.google.com/document/d/1HfQWGTYjcnomf1kFJP9o5jeZVK7PxHznHnXaFY5pnG8/edit?usp=sharing" target="_blank" className="links">Resume</a>
