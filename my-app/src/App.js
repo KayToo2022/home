@@ -104,12 +104,10 @@ export default function App() {
           </div>
           <div className="main" style={{float: 'left', backgroundColor:'#c9cece'}}>
             <div style={{backgroundColor: 'white', margin:'50px'}}>
-              <HashRouter>
                 
                   <Route exact path="/">
                     <Home/>
                     <PortfolioSummary/>
-                    
                   </Route>
                   <Route path="/version">
                     <About />
@@ -133,7 +131,7 @@ export default function App() {
                   </Route>
 
                 
-              </HashRouter>
+              
               
             </div>
              
