@@ -52,33 +52,36 @@ export default function App() {
             
             <div className="main" style={{float: 'left', backgroundColor:'#c9cece', width: '100vw', marginTop: '80px'}}>
               <div style={{backgroundColor: 'white', margin:'50px'}}>
-                <HashRouter>
+                <HashRouter basename="/home">
+                  <Switch>
+                    <Route exact path="/">
+                      <Home/>
+                      <PortfolioSummary/>
+                      
+                    </Route>
+                    <Route path="/version">
+                      <About />
+                    </Route>
+                    <Route path="/WebPortfolio">
+                      <WebPortfolio/>
+                    </Route>
+                    <Route path="/SoftwarePortfolio">
+                      <SoftwarePortfolio/>
+                    </Route>
+                    <Route path="/contactme">
+                      <ContactMe />
+                    </Route>
 
+                    <Route path="/CoverLetter">
+                      <CoverLetter />
+                    </Route>
+
+                    <Route path="/education">
+                      <Education/>
+                    </Route>
+
+                  </Switch>
                 </HashRouter>
-                <Switch>
-                  <Route exact path="/home">
-                    <Home/>
-                    <PortfolioSummary/>
-                    
-                  </Route>
-                  <Route path="/home/WebPortfolio">
-                    <WebPortfolio/>
-                  </Route>
-                  <Route path="//homeSoftwarePortfolio">
-                    <SoftwarePortfolio/>
-                  </Route>
-                  <Route path="/home/contactme">
-                    <ContactMe />
-                  </Route>
-  
-                  <Route path="/home/CoverLetter">
-                    <CoverLetter />
-                  </Route>
-
-                  <Route path="/home/education">
-                    <Education/>
-                  </Route>
-                </Switch>
               </div>
                
             </div>
