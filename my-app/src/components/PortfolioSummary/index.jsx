@@ -22,7 +22,7 @@ function PortfolioSummary() {
                         where I helped develop some of their in-house projects, such as Meals For Me and Serving Fresh, and more.
 
                         <p>
-                            <Link to="/WebPortfolio" className="link">Learn More</Link>
+                            <Link to="/home/WebPortfolio" className="link">Learn More</Link>
                         </p>
                     </div>
                 </div>
