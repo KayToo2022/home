@@ -4,7 +4,8 @@ import {
   Switch,
   Route,
   Link,
-  useHistory
+  useHistory,
+  HashRouter
 } from "react-router-dom";
 
 import Home from "./components/Home"
@@ -51,15 +52,15 @@ export default function App() {
             
             <div className="main" style={{float: 'left', backgroundColor:'#c9cece', width: '100vw', marginTop: '80px'}}>
               <div style={{backgroundColor: 'white', margin:'50px'}}>
+                <HashRouter>
+
+                </HashRouter>
                 <Switch>
                   <Route exact path="/home">
                     <Home/>
                     <PortfolioSummary/>
                     
                   </Route>
-                  {/* <Route path="/Blog">
-                    <About />
-                  </Route> */}
                   <Route path="/home/WebPortfolio">
                     <WebPortfolio/>
                   </Route>
@@ -106,9 +107,9 @@ export default function App() {
                   <PortfolioSummary/>
                   
                 </Route>
-                {/* <Route path="/Blog">
+                <Route path="home/version">
                   <About />
-                </Route> */}
+                </Route>
                 <Route path="/home/WebPortfolio">
                   <WebPortfolio/>
                 </Route>
@@ -150,7 +151,7 @@ export default function App() {
 function About() {
   return (
     <div>
-      <h2>about filler</h2>
+      <h2>last update on 09/16/2021</h2>
     </div>
   );
 }
