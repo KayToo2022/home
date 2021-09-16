@@ -17,10 +17,10 @@ function Sidebar() {
         return(
             <div>
                 <p>
-                    <Link to="/home/WebPortfolio" className="sublinks">Web Development</Link>
+                    <Link to="/home/#/WebPortfolio" className="sublinks">Web Development</Link>
                 </p>
                 <p> 
-                    <Link to="/home/SoftwarePortfolio" className="sublinks">Software Development</Link>
+                    <Link to="/home/#/SoftwarePortfolio" className="sublinks">Software Development</Link>
                 </p>
             </div>
             
@@ -55,7 +55,7 @@ function Sidebar() {
             }
 
             <p>
-                <Link to="/home/CoverLetter" className="links">Cover Letter Generator</Link> 
+                <Link to="/home/#/CoverLetter" className="links">Cover Letter Generator</Link> 
             </p>
 
             
@@ -64,7 +64,7 @@ function Sidebar() {
                 <a href="https://docs.google.com/document/d/1HfQWGTYjcnomf1kFJP9o5jeZVK7PxHznHnXaFY5pnG8/edit?usp=sharing" target="_blank" className="links">Resume</a>
             </p>
 
-            <p>Version 0.0.0</p>            
+            <p>Version 0.0.1</p>            
         </div>
     )
 }
