@@ -101,34 +101,37 @@ export default function App() {
           </div>
           <div className="main" style={{float: 'left', backgroundColor:'#c9cece'}}>
             <div style={{backgroundColor: 'white', margin:'50px'}}>
-              <Switch>
-                <Route exact path="/home">
-                  <Home/>
-                  <PortfolioSummary/>
-                  
-                </Route>
-                <Route path="home/version">
-                  <About />
-                </Route>
-                <Route path="/home/WebPortfolio">
-                  <WebPortfolio/>
-                </Route>
-                <Route path="/home/SoftwarePortfolio">
-                  <SoftwarePortfolio/>
-                </Route>
-                <Route path="/home/contactme">
-                  <ContactMe />
-                </Route>
+              <HashRouter basename="/home">
+                <Switch>
+                  <Route exact path="/">
+                    <Home/>
+                    <PortfolioSummary/>
+                    
+                  </Route>
+                  <Route path="/version">
+                    <About />
+                  </Route>
+                  <Route path="/WebPortfolio">
+                    <WebPortfolio/>
+                  </Route>
+                  <Route path="/SoftwarePortfolio">
+                    <SoftwarePortfolio/>
+                  </Route>
+                  <Route path="/contactme">
+                    <ContactMe />
+                  </Route>
 
-                <Route path="/home/CoverLetter">
-                  <CoverLetter />
-                </Route>
+                  <Route path="/CoverLetter">
+                    <CoverLetter />
+                  </Route>
 
-                <Route path="/home/education">
-                  <Education/>
-                </Route>
+                  <Route path="/education">
+                    <Education/>
+                  </Route>
 
-              </Switch>
+                </Switch>
+              </HashRouter>
+              
             </div>
              
           </div>
