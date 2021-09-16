@@ -62,7 +62,9 @@ function Sidebar() {
                 
             <p>
                 <a href="https://docs.google.com/document/d/1HfQWGTYjcnomf1kFJP9o5jeZVK7PxHznHnXaFY5pnG8/edit?usp=sharing" target="_blank" className="links">Resume</a>
-            </p>            
+            </p>
+
+            <p>Version 0.0.0</p>            
         </div>
     )
 }
