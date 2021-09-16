@@ -17,10 +17,10 @@ function Sidebar() {
         return(
             <div>
                 <p>
-                    <Link to="/home/WebPortfolio" className="sublinks">Web Development</Link>
+                    <Link to="/WebPortfolio" className="sublinks">Web Development</Link>
                 </p>
                 <p> 
-                    <Link to="/home/SoftwarePortfolio" className="sublinks">Software Development</Link>
+                    <Link to="/SoftwarePortfolio" className="sublinks">Software Development</Link>
                 </p>
             </div>
             
@@ -32,13 +32,13 @@ function Sidebar() {
             <img src={Logo} style = {{height: '50px', width: '50px', borderRadius:'50%', marginTop: '40px'}}></img>
 
             <h1>
-                <Link to="/home/" className="links">Kyle Tu</Link>
+                <Link to="/" className="links">Kyle Tu</Link>
             </h1>
 
             <p>kaytoo2022@gmail.com</p>
             
             <p>
-                <Link to="/home/" className="links">Home</Link> 
+                <Link to="/" className="links">Home</Link> 
             </p>
             
             {/* <p>
@@ -55,7 +55,7 @@ function Sidebar() {
             }
 
             <p>
-                <Link to="/home/CoverLetter" className="links">Cover Letter Generator</Link> 
+                <Link to="/CoverLetter" className="links">Cover Letter Generator</Link> 
             </p>
 
             
@@ -64,7 +64,7 @@ function Sidebar() {
                 <a href="https://docs.google.com/document/d/1HfQWGTYjcnomf1kFJP9o5jeZVK7PxHznHnXaFY5pnG8/edit?usp=sharing" target="_blank" className="links">Resume</a>
             </p>
 
-            <p>Version 0.0.5</p>            
+            <p>Version 0.0.6 test</p>            
         </div>
     )
 }

@@ -45,7 +45,7 @@ export default function App() {
   console.log(getWindowDimensions().width)
   if (getWindowDimensions().width < 800) {
     return (
-      <Router>
+      <div>
         <MobileNav/>
         
         <div className="App">
@@ -86,12 +86,12 @@ export default function App() {
                
             </div>
         </div>
-     </Router>
+     </div>
     );
   }
   return (
-    <Router>
-      {/* <MobileNav/> */}
+    
+      
       
       <div className="App">
           <div className="side" style={{width: '300px', float: 'left'}}>
@@ -107,17 +107,17 @@ export default function App() {
                 
 
                   <Switch>
-                    <Route exact path="/home/">
+                    <Route exact path="/">
                       <Home/>
                       <PortfolioSummary/>
                     </Route>
                     <Route path="/version">
                       <About />
                     </Route>
-                    <Route path="/home/WebPortfolio">
+                    <Route path="/WebPortfolio">
                       <WebPortfolio/>
                     </Route>
-                    <Route path="/home/SoftwarePortfolio">
+                    <Route path="/SoftwarePortfolio">
                       <SoftwarePortfolio/>
                     </Route>
                     <Route path="/contactme">
@@ -125,7 +125,7 @@ export default function App() {
                     </Route>
 
 
-                    <Route path="/home/CoverLetter">
+                    <Route path="/CoverLetter">
                       <CoverLetter />
                     </Route>
 
@@ -141,7 +141,7 @@ export default function App() {
              
           </div>
       </div>
-   </Router>
+   
   );
 }
 
