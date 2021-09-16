@@ -104,9 +104,9 @@ export default function App() {
           </div>
           <div className="main" style={{float: 'left', backgroundColor:'#c9cece'}}>
             <div style={{backgroundColor: 'white', margin:'50px'}}>
-              
-                <Switch>
-                  <Route exact path="/home">
+              <HashRouter>
+                
+                  <Route exact path="/">
                     <Home/>
                     <PortfolioSummary/>
                     
@@ -114,17 +114,17 @@ export default function App() {
                   <Route path="/version">
                     <About />
                   </Route>
-                  <Route path="home/#/WebPortfolio">
+                  <Route path="/WebPortfolio">
                     <WebPortfolio/>
                   </Route>
-                  <Route path="home/#/SoftwarePortfolio">
+                  <Route path="/SoftwarePortfolio">
                     <SoftwarePortfolio/>
                   </Route>
-                  <Route path="home/#/contactme">
+                  <Route path="/contactme">
                     <ContactMe />
                   </Route>
 
-                  <Route path="home/#/CoverLetter">
+                  <Route path="/CoverLetter">
                     <CoverLetter />
                   </Route>
 
@@ -132,8 +132,8 @@ export default function App() {
                     <Education/>
                   </Route>
 
-                </Switch>
-              
+                
+              </HashRouter>
               
             </div>
              
