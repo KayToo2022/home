@@ -17,10 +17,10 @@ function Sidebar() {
         return(
             <div>
                 <p>
-                    <Link to="/WebPortfolio" className="sublinks">Web Development</Link>
+                    <Link to="/home/WebPortfolio" className="sublinks">Web Development</Link>
                 </p>
                 <p> 
-                    <Link to="/SoftwarePortfolio" className="sublinks">Software Development</Link>
+                    <Link to="/home/SoftwarePortfolio" className="sublinks">Software Development</Link>
                 </p>
             </div>
             
@@ -55,7 +55,7 @@ function Sidebar() {
             }
 
             <p>
-                <Link to="/home/#/CoverLetter" className="links">Cover Letter Generator</Link> 
+                <Link to="/home/CoverLetter" className="links">Cover Letter Generator</Link> 
             </p>
 
             

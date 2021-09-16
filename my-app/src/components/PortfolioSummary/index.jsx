@@ -40,7 +40,7 @@ function PortfolioSummary() {
                         in a space and shade them properly according to the lights placed. Besides this, I also have projects in both Java and 
                         Python.
                         <p>
-                            <Link to="/SoftwarePortfolio" className="link">Learn More</Link>
+                            <Link to="/home/SoftwarePortfolio" className="link">Learn More</Link>
                         </p>
                     </div>
                     
