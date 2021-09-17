@@ -22,7 +22,7 @@ function PortfolioSummary() {
                         where I helped develop some of their in-house projects, such as Meals For Me and Serving Fresh, and more.
 
                         <p>
-                            <Link to="/home/WebPortfolio" className="link">Learn More</Link>
+                            <Link to="/WebPortfolio" className="link">Learn More</Link>
                         </p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ function PortfolioSummary() {
                         in a space and shade them properly according to the lights placed. Besides this, I also have projects in both Java and 
                         Python.
                         <p>
-                            <Link to="/home/SoftwarePortfolio" className="link">Learn More</Link>
+                            <Link to="/SoftwarePortfolio" className="link">Learn More</Link>
                         </p>
                     </div>
                     
