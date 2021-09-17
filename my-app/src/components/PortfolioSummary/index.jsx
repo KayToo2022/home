@@ -28,7 +28,7 @@ function PortfolioSummary() {
                 </div>
 
                 
-                
+                <br/>
                 <br/>
 
                 <p className="subheader">Software Development</p>
